@@ -1,0 +1,14 @@
+{
+  "name": "@cultnet/irccloud",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "lsc -c index ircCloud"
+  },
+  "dependencies": {
+    "irccloud": "^1.2.0"
+  },
+  "devDependencies": {
+    "livescript": "^1.6.0"
+  }
+}
