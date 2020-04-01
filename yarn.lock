@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@cultnet/send-queue@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cultnet/send-queue/-/send-queue-0.1.0.tgz#a0d15640d5c75d33ea9cc98875d7abad6db3552a"
+  integrity sha512-1EYA4K0VGdewrO9mf2sQUBHEEpuP5gUXFsu43TrjNo9hnepVwMrZdlcmW4hw/cIF9/XhRNcfEbnG+WaPLBki2w==
+
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
