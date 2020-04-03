@@ -1,5 +1,5 @@
-{ MultiSend } = require \@cultnet/send-queue
-{ Bus } = require \@cultnet/bus
+{ MultiSend } = require (if process.env.CULTNET_LIVE is true then \@cultnet/send-queue/src/sendQueue else \@cultnet/send-queue)
+{ Bus } = require (if process.env.CULTNET_LIVE is true then \@cultnet/bus/src/bus else \@cultnet/bus)
 { obj-to-pairs, each } = require \prelude-ls
 IC = require \irccloud
 
@@ -29,10 +29,11 @@ function start email, password, options
     irc.on event, (buffer, sender, ...args) ->
       conn = irc.connections[buffer.cid]
       return if options?.whitelist and (not (options.whitelist.includes conn.name))
-      Bus.send \event, event, \irccloud,
+      Bus.send \event, event, \irccloud, {
         server: conn.name
         channel: buffer.name
         nick: sender.nick
         user-id: sender.nick
         is-mine: sender.nick is irc.nick
         ...(props buffer, sender, ...args)
+      }
