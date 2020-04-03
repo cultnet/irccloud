@@ -1,4 +1,5 @@
 { MultiSend } = require \@cultnet/send-queue
+{ Bus } = require \@cultnet/bus
 { obj-to-pairs, each } = require \prelude-ls
 IC = require \irccloud
 

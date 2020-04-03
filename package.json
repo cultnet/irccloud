@@ -10,6 +10,7 @@
     "build": "lsc -o dist -c src/ircCloud"
   },
   "dependencies": {
+    "@cultnet/bus": "^0.1.0",
     "@cultnet/send-queue": "^0.1.0",
     "irccloud": "^1.2.0",
     "prelude-ls": "^1.1.2"
